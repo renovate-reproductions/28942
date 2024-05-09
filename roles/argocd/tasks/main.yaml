@@ -1,0 +1,6 @@
+---
+- name: Print versions
+  ansible.builtin.debug:
+    msg:
+      - 'Chart version: {{ argocd_vars.kubernetes.helm.chart.version }}'
+      - 'Release version: {{ argocd_vars.release.version }}'

@@ -1,0 +1,7 @@
+---
+- name: Playbook
+  hosts: server
+  become: true
+  gather_facts: true
+  roles:
+    - role: argocd

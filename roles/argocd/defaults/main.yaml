@@ -1,0 +1,11 @@
+---
+argocd_vars:
+  kubernetes:
+    helm:
+      chart:
+        name: argo-cd
+        org: argoproj
+        version: 6.7.17
+    namespace: kube-system
+  release:
+    version: v2.10.8
