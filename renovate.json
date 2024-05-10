@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabledManagers": ["custom.regex"],
   "customManagers": [
     {
       "customType": "regex",
@@ -11,18 +12,6 @@
       ],
       "matchStrings": [
         "^\\s+helm:\\s+chart:[\\s\\S]+version:\\s+(?<currentValue>.+)[\\s\\S]+release:$"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    },
-    {
-      "customType": "regex",
-      "datasourceTemplate": "github-releases",
-      "depNameTemplate": "argoproj/argo-cd",
-      "fileMatch": [
-        "roles/argocd/defaults/main.yaml"
-      ],
-      "matchStrings": [
-        "^\\s+release:[\\s\\S]+version:\\s+(?<currentValue>.+)$"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
