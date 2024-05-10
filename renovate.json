@@ -11,9 +11,8 @@
         "roles/argocd/defaults/main.yaml"
       ],
       "matchStrings": [
-        "^\\s+helm:\\s+chart:[\\s\\S]+version:\\s+(?<currentValue>.+)[\\s\\S]+release:$"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+        "version:\\s+(?<currentValue>.+)\\n"
+      ]
     }
   ],
   "extends": [
