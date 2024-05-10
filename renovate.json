@@ -11,7 +11,7 @@
         "roles/argocd/defaults/main.yaml"
       ],
       "matchStrings": [
-        "version:\\s+(?<currentValue>.+)\\n"
+        "name:\\s+argo-cd\\n\\s+org:\\s+argoproj\\n\\s+version:\\s+(?<currentValue>.+)\\n"
       ]
     }
   ],
